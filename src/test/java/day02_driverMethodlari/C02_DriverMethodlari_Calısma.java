@@ -1,0 +1,19 @@
+package day02_driverMethodlari;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class C02_DriverMethodlari_Calısma {
+    public static void main(String[] args) throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver","src/resources/drivers/chromedriver.exe");
+        WebDriver driver=new ChromeDriver();
+        driver.manage().window().maximize();
+
+        driver.get("https://www.amazon.com");
+        System.out.println("actual Title : "+ driver.getTitle());
+        System.out.println("actual Url : " +driver.getCurrentUrl());
+        Thread.sleep(2000);
+        driver.close();
+
+    }
+}
